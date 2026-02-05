@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Card</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.hotel-name-box {
+  background-image: url("https://img.freepik.com/premium-photo/photo-delicious-chicken-shik-kabab_612827-13299.jpg");
+  background-size: cover;       /* makes the image fill the box */
+  background-position: center;  /* keeps the image centered */
+  border-radius: 10px;
+ height: 50px; /* or any value you prefer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers text vertically */
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 40px 20px;           /* extra padding for text spacing */
+  text-align: center;
+  width: 100%;
+  max-width: 870px;            /* match menu container width */
+  margin: 0 auto 20px;
+  color: #fff;                  /* make text white for contrast */
+}
+
+.hotel-name-box h1,
+.hotel-name-box p {
+  /* semi-transparent black */
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #fff; /* ensure text is white */
+}
+
+
+    .menu-heading {
+    text-align: center;
+    margin-bottom: 40px;
+   }
+
+    .menu-heading h1 {
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+   }
+
+   .menu-heading p {
+     font-size: 18px;
+     color: #7f8c8d;
+   }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+	
+    }
+
+    .menu-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .menu-card h2 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .menu-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    .order-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #27ae60;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: #219150;
+    }
+@media (max-width: 768px) {
+  .hotel-name-box h1 { font-size: 26px; }
+  .menu-container { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .hotel-name-box h1 { font-size: 22px; }
+  .menu-container { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="hotel-name-box">
+      <h1>🍴 Spice & Grill Restaurant</h1>
+      <p>Our Signature Menu</p>
+    </div>
+  <div class="menu-container">
+    <!-- Item 1 -->
+    <div class="menu-card">
+      <img src="https://th.bing.com/th/id/OIP.5AT39p5w7-_Z36gsnaMcOgHaHa?w=184&h=184&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Chicken Shawarma">
+      <h2>Chicken Shawarma</h2>
+      <p>Deliciously marinated chicken wrapped in pita bread with veggies and sauce.</p>
+      <div class="price">₹250</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Chicken%20Shawarma';">Order Now</a>
+
+    </div>
+
+    <!-- Item 2 -->
+    <div class="menu-card">
+      <img src="https://www.superhealthykids.com/wp-content/uploads/2021/10/best-veggie-pizza-featured-image-square-2.jpg" alt="Veggie Pizza">
+      <h2>Veggie Pizza</h2>
+      <p>Loaded with fresh vegetables, mozzarella cheese, and a crispy crust.</p>
+      <div class="price">₹400</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Veggie%20Pizza';">Order Now</a>
+
+    </div>
+
+    <!-- Item 3 -->
+    <div class="menu-card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.gtyPX2OzBaloMgZ21cJjGwHaDs?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cheese Burger">
+      <h2>Cheese Burger</h2>
+      <p>Juicy beef patty topped with cheddar cheese, lettuce, and tomato.</p>
+      <div class="price">₹300</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Cheese%20Burger';">Order Now</a>
+
+    </div>
+
+    <!-- Item 4 -->
+    <div class="menu-card">
+      <img src="https://cravinghomecooked.com/wp-content/uploads/2019/05/one-pot-creamy-parmesan-pasta-1-9.jpg" alt="Creamy Pasta">
+      <h2>Creamy Pasta</h2>
+      <p>Penne pasta tossed in rich Alfredo sauce with mushrooms and herbs.</p>
+      <div class="price">₹350</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Creamy%20Pasta';">Order Now</a>
+
+    </div>
+ <!-- Item 5 -->
+    <div class="menu-card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.B2ELzkjkjEsz7BotmblcIgHaE8?w=1350&h=900&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chicken Salad">
+      <h2>Chicken Salad</h2>
+      <p>Tender chicken tossed with lettuce, vegetables, and creamy dressing.</p>
+      <div class="price">₹450</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Chicken%20Salad';">Order Now</a>
+
+    </div>
+ <!-- Item 6 -->
+    <div class="menu-card">
+      <img src="https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg" alt="Chicken Wings">
+      <h2>Chicken Wings</h2>
+      <p>Juicy chicken wings glazed in a smoky barbecue sauce with a hint of spice.</p>
+      <div class="price">₹200</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Chicken%20Wings';">Order Now</a>
+    </div>
+<!-- Item 4 -->
+    <div class="menu-card">
+      <img src="https://cravinghomecooked.com/wp-content/uploads/2019/05/one-pot-creamy-parmesan-pasta-1-9.jpg" alt="Creamy Pasta">
+      <h2>Creamy Pasta</h2>
+      <p>Penne pasta tossed in rich Alfredo sauce with mushrooms and herbs.</p>
+      <div class="price">₹350</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Creamy%20Pasta';">Order Now</a>
+    </div>
+ <!-- Item 5 -->
+    <div class="menu-card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.B2ELzkjkjEsz7BotmblcIgHaE8?w=1350&h=900&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chicken Salad">
+      <h2>Chicken Salad</h2>
+      <p>Tender chicken tossed with lettuce, vegetables, and creamy dressing.</p>
+      <div class="price">₹450</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Chicken%20Salad';">Order Now</a>
+    </div>
+ <!-- Item 6 -->
+    <div class="menu-card">
+      <img src="https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg" alt="Chicken Wings">
+      <h2>Chicken Wings</h2>
+      <p>Juicy chicken wings glazed in a smoky barbecue sauce with a hint of spice.</p>
+      <div class="price">₹200</div>
+      <a href="#" class="order-btn" onclick="window.location.href='order.html?item=Chicken%20Wings';">Order Now</a>
+
+    </div>
+</div>
+</body>
+</html>
