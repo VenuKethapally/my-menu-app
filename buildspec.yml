@@ -11,4 +11,5 @@ phases:
       - echo "Build completed successfully"
 artifacts:
   files:
-    - '**/*'
+    - app.zip
+    - build_hash.txt
