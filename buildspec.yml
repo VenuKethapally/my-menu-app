@@ -4,6 +4,9 @@ phases:
   install:
     commands:
       - npm install
+  test:
+    commands:
+      - echo "No tests defined, skipping..."    
 
   build:
     commands:
