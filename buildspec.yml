@@ -4,9 +4,7 @@ phases:
   install:
     commands:
       - npm install
-  test:
-    commands:
-      - echo "No tests defined, skipping..."    
+    
 
   build:
     commands:
@@ -18,6 +16,10 @@ phases:
       - sha256sum app.zip > build_hash.txt
       - cat build_hash.txt   # prints hash in logs for verification
       - echo "Build completed successfully"
+
+  test:
+    commands:
+      - echo "No tests defined, skipping..."      
 
 artifacts:
   files:
