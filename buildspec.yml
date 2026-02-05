@@ -8,10 +8,13 @@ phases:
     commands:
       - echo "Running HTML lint..."
       - npx htmlhint index.html
+      - echo "Packaging artefact..."
+      - zip -r app.zip index.html css/ js/
+      - echo "Generating checksum..."
+      - sha256sum app.zip > build_hash.txt
       - echo "Build completed successfully"
 artifacts:
   files:
-    - **/*
     - app.zip
     - build_hash.txt
     
