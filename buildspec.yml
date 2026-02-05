@@ -13,6 +13,8 @@ phases:
       - echo "Generating checksum..."
       - sha256sum app.zip > build_hash.txt
       - echo "Build completed successfully"
+      - sha256sum app.zip > build_hash.txt
+      - cat build_hash.txt   # prints hash in logs for verification
 artifacts:
   files:
     - app.zip
