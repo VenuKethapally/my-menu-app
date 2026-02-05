@@ -4,6 +4,10 @@ phases:
   install:
     commands:
       - npm install
+
+  pre_build:
+    commands:
+      - echo "No tests defined, skipping..."      
     
 
   build:
@@ -17,9 +21,7 @@ phases:
       - cat build_hash.txt   # prints hash in logs for verification
       - echo "Build completed successfully"
 
-  test:
-    commands:
-      - echo "No tests defined, skipping..."      
+      
 
 artifacts:
   files:
