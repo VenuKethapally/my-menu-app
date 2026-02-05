@@ -6,6 +6,8 @@ phases:
       - npm install
   build:
     commands:
+      - echo "Running HTML lint..."
+      - npx htmlhint index.html
       - echo "Build completed successfully"
 artifacts:
   files:
