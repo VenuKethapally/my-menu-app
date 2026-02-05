@@ -25,6 +25,5 @@ phases:
 
 artifacts:
   files:
-    - app.zip
-    - build_hash.txt
+    - **/*
     
