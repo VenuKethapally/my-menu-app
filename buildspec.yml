@@ -4,17 +4,18 @@ phases:
   install:
     commands:
       - npm install
+
   build:
     commands:
       - echo "Running HTML lint..."
       - npx htmlhint index.html
       - echo "Packaging artefact..."
-      - zip -r app.zip index.html css/ js/
+      - zip -r app.zip index.html app.js README.md   # include only needed files
       - echo "Generating checksum..."
       - sha256sum app.zip > build_hash.txt
-      - echo "Build completed successfully"
-      - sha256sum app.zip > build_hash.txt
       - cat build_hash.txt   # prints hash in logs for verification
+      - echo "Build completed successfully"
+
 artifacts:
   files:
     - app.zip
